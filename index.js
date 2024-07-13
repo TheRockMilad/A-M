@@ -5,10 +5,10 @@ const ArticleRouter = require("./src/routes/article/routes")
 const AuthRouter = require("./src/routes/auth/routes")
 
 app.use(express.json())
-app.use(express.urlencoded({extended : ture}))
+app.use(express.urlencoded({extended : false}))
 
 app.use("/api/courses",ArticleRouter)
-app.use("/api/auth",authRouter)
+app.use("/api/auth",AuthRouter)
 
 const port = process.env.PORT || 4000
 app.listen(port,()=>{
